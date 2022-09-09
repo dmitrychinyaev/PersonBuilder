@@ -3,7 +3,7 @@ import java.util.Objects;
 public class Person {
     protected final String name;
     protected final String surname;
-    protected int age = -1;
+    protected int age;
     protected String address;
 
 
@@ -20,7 +20,7 @@ public class Person {
 
 
     public boolean hasAge() {
-        return this.age >= 0;
+        return this.age > 0;
     }
 
     public boolean hasAddress() {
@@ -70,7 +70,6 @@ public class Person {
     public PersonBuilder newChildBuilder() {
         PersonBuilder child = new PersonBuilder();
         child.setSurname(this.surname);
-        child.setAge(0);
         child.setAddress(this.address);
         return child;
     }

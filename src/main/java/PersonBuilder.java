@@ -24,8 +24,8 @@ public class PersonBuilder {
     public Person build(){
         Person person = new Person(name,surname,age);
         person.setAddress(address);
-        if ((name == null) || (surname == null) || (!person.hasAddress()) || (!person.hasAge())){
-            throw new IllegalStateException();
+        if ((name == null) || (surname == null) || (!person.hasAddress())){
+            throw new IllegalStateException("Недостаточно данных");
         }
         if (age < 0){
             throw new IllegalArgumentException("Некорректный возраст");

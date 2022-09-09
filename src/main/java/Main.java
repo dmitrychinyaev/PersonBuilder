@@ -3,7 +3,7 @@ public class Main {
         Person mom = new PersonBuilder()
                 .setName("Анна")
                 .setSurname("Вольф")
-                .setAge(18)
+                .setAge(-18)
                 .setAddress("Сидней")
                 .build();
         Person son = mom.newChildBuilder()
